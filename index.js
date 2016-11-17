@@ -7,7 +7,7 @@ var connectionString = "postgres://postgres@localhost/massive_project";
 
 var massiveInstance = massive.connectSync({connectionString : connectionString});
 
-
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(cors());
 
